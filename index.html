@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Código de Barras e QR Code</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Código de Barras e QR Code</h1>
+    <div class="generator">
+      <!-- Gerar Código de Barras -->
+      <div class="barcode">
+        <label for="barcodeInput">Texto para Código de Barras:</label>
+        <input type="text" id="barcodeInput" placeholder="Digite um valor">
+        <button onclick="generateBarcode()">Gerar Código de Barras</button>
+        <div id="barcode"></div> <!-- Exibição do código de barras -->
+        <button id="downloadBarcode" style="display: none;" onclick="downloadBarcode()">Baixar Código de Barras</button>
+      </div>
+      
+      <!-- Gerar QR Code -->
+      <div class="qrcode">
+        <label for="qrcodeInput">Texto para QR Code:</label>
+        <input type="text" id="qrcodeInput" placeholder="Digite um URL ou texto">
+        <button onclick="generateQRCode()">Gerar QR Code</button>
+        <div id="qrcode"></div> <!-- Exibição do QR Code -->
+        <button id="downloadQRCode" style="display: none;" onclick="downloadQRCode()">Baixar QR Code</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
